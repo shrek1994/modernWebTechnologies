@@ -12,7 +12,7 @@ body {
     color: white;
     font-size: x-large;
     padding: 20px;
-    margin-right: 10px;
+    border-right: solid 10px lightgray;
 }
 
 .subtitle {
