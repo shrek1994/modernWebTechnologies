@@ -1,5 +1,4 @@
 body {
-    --my-blue: #113361;
     background-color: darkslategray;
     max-width: 1000px;
     margin-left: auto;
@@ -8,7 +7,7 @@ body {
 
 .title {
     font-weight: bold;
-    background-color: var(--my-blue);
+    background-color: #113361;
     color: white;
     font-size: x-large;
     padding: 20px;
@@ -45,7 +44,7 @@ body {
     color: white;
     font-weight: bold;
     font-size: x-large;
-    background-color: var(--my-blue);
+    background-color: #113361;
     padding: 5px;
     margin-right: 10px;
 
@@ -68,7 +67,7 @@ a.button {
     margin-top: 15px;
     float: right;
     border: black;
-    background-color: var(--my-blue);
+    background-color: #113361;
     border-radius: 15px;
     font-size: x-large;
     color: white;
@@ -79,7 +78,7 @@ a.button {
 }
 
 .course_title {
-    color: var(--my-blue);
+    color: #113361;
     font-weight: bold;
     font-size: large;
     margin-top: 20px;
@@ -90,7 +89,7 @@ a.button {
 
 .what_did_i_learn {
     color: white;
-    background-color: var(--my-blue);
+    background-color: #113361;
     font-size: large;
     padding: 5px;
 
@@ -113,4 +112,11 @@ a.button {
     color: white;
     background-color: dodgerblue;
     padding: 5px;
+}
+
+img {
+    width: 96px;
+    height: 128px;
+    float: right;
+    margin-left: 10px;
 }
