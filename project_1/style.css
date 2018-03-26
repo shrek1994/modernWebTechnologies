@@ -101,3 +101,13 @@ a.button {
     padding: 5px;
 
 }
+
+.description {
+    padding: 5px;
+}
+
+.summary {
+    color: white;
+    background-color: dodgerblue;
+    padding: 5px;
+}
