@@ -65,6 +65,7 @@ a {
 }
 
 a.button {
+    margin-top: 15px;
     float: right;
     border: black;
     background-color: var(--my-blue);
