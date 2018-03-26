@@ -59,7 +59,9 @@ body {
 
 
 a {
-    text-decoration: none
+    font-weight: bold;
+    text-decoration: none;
+    color: saddlebrown;
 }
 
 a.button {
