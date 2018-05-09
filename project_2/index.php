@@ -29,13 +29,13 @@ echo $Page->PageHeader();
 echo $Page->beginTable("column_title");
 
 $Page->addRow("Studia - I semestr(2014/15)", "1_sem.php");
-$Page->addRow("Studia - II semestr(2014/15)", "1_sem.php");
-$Page->addRow("Studia - III semestr(2015/16)", "1_sem.php");
-$Page->addRow("Studia - IV semestr(2015/16)", "1_sem.php");
-$Page->addRow("Studia - V semestr(2016/17)", "1_sem.php");
-$Page->addRow("Studia - V semestr - urlop (2016/17)", "1_sem.php");
-$Page->addRow("Studia - V semestr - urlop (2017/18)", "1_sem.php");
-$Page->addRow("Studia - VI semestr(2017/18) - trwa", "1_sem.php");
+$Page->addRow("Studia - II semestr(2014/15)", "2_sem.php");
+$Page->addRow("Studia - III semestr(2015/16)", "3_sem.php");
+$Page->addRow("Studia - IV semestr(2015/16)", "4_sem.php");
+$Page->addRow("Studia - V semestr(2016/17)", "5_sem.php");
+$Page->addRow("Studia - V semestr - urlop (2016/17)", "5v2_sem.php");
+$Page->addRow("Studia - V semestr - urlop (2017/18)", "5v3_sem.php");
+$Page->addRow("Studia - VI semestr(2017/18) - trwa", "6_sem.php");
 echo $Page->createColumn("Moja edukacja:", "ol");
 
 $Page->addRow("Ulubione filmy", "hobbies/favourite_movies.html");
