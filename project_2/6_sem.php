@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/page_template.php");
+require_once(__DIR__ . "/php/page_template.php");
 $Page =  new myPage("Maciej Woźny: edukacja");
 echo $Page->SetDescription("Szósty semestr (2017/18) - w trakcie odbywania");
 echo $Page->Begin();

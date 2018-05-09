@@ -1,13 +1,14 @@
 <?php
-require_once(__DIR__."/page_template.php");
+require_once(__DIR__ . "/php/page_template.php");
 $Page =  new myPage("Maciej Woźny: edukacja");
 echo $Page->Begin();
 echo $Page->PageHeader();
 ?>
 
 <div class="description">
-    <img src="my_photo.jpg" alt="Maciej Woźny">
-    <br>
+
+    <?php echo $Page->AddPhoto(); ?>
+
     Liceum skończyłem w 2013r. W tym też roku poszedłem na studia na Politechnice Wrocławskiej na kierunek
     Automatyka i Robotyka na wydziale Elektroniki.
     Po roku czasu stwierdziłem że roboty, to nie jest coś co chciałbym programować całe życie.

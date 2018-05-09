@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/page_template.php");
+require_once(__DIR__ . "/php/page_template.php");
 $Page =  new myPage("Maciej Woźny: edukacja");
 echo $Page->SetDescription("Piąty semestr (lato 2016/17) - urlop dziekański");
 echo $Page->Begin();

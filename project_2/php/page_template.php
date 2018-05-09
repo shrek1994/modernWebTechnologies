@@ -32,11 +32,12 @@ $FOOTER =<<<EOT
 </html>   
 EOT;
 
-$PHOTO =<<<EOT
-<img src="my_photo.jpg" alt="Maciej Woźny">
+$PHOTO = <<<EOT
+<img src="img/my_photo.jpg" alt="Maciej Woźny">
+<br>
 EOT;
 
-$BUTTON =<<<EOT
+$BUTTON = <<<EOT
     <a class="button" href="index.php">Powrót</a>
     <br>
     <br>
