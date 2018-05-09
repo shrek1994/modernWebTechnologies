@@ -39,8 +39,8 @@ $Page->addRow("Studia - V semestr - urlop (2017/18)", "5v3_sem.php");
 $Page->addRow("Studia - VI semestr(2017/18) - trwa", "6_sem.php");
 echo $Page->createColumn("Moja edukacja:", "ol");
 
-$Page->addRow("Ulubione filmy", "hobbies/favourite_movies.html");
-$Page->addRow("Ciekawe książki", "hobbies/interesting_books.html");
+$Page->addRow("Ulubione filmy", "movie.php");
+$Page->addRow("Ciekawe książki", "books.php");
 $Page->addRow("Wycieczki rowerowe");
 echo $Page->createColumn("Moje hobby:");
 
