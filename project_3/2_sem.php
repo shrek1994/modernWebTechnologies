@@ -45,6 +45,11 @@ echo $Page->PageHeader();
 
             </ul>
 
+            <p>
+                \begin{align}
+                (a + b)^2 = a^2 + 2ab + b^2
+                \end{align}
+            </p>
         </div>
 
         <div class="column-course">
@@ -72,6 +77,12 @@ echo $Page->PageHeader();
                 <li> Przestrzenie wektorowe </li>
             </ul>
 
+            <p>
+                Mnożenie podzbiorów:
+                \begin{align}
+                (A,B) \rightarrow AB = {ab : a ∈ A, b ∈ B}
+                \end{align}
+            </p>
         </div>
 
         <div class="column-course">

@@ -94,6 +94,11 @@ echo $Page->PageHeader();
                 <li> Statystyka </li>
             </ul>
 
+            <p>
+                \begin{align}
+                Jeżeli A \subset  B, to\\ P ( B \smallsetminus A ) = P( B ) - P ( A )
+                \end{align}
+            </p>
         </div>
 
         <div class="column-course">
@@ -102,6 +107,7 @@ echo $Page->PageHeader();
                 <li> Rozszerzyć wiedzę na temat statystyki </li>
             </ul>
         </div>
+
     </div>
 
 

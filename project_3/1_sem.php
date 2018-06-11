@@ -18,6 +18,11 @@ echo $Page->PageHeader();
                 <li> Relacje równoważności </li>
                 <li> Indukcja matematyczna </li>
             </ul>
+            <p>
+                \begin{align}
+                \neg(p ∧ q) \leftrightarrow (\neg p ∨ \neg q)
+                \end{align}
+            </p>
 
         </div>
 

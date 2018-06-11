@@ -74,6 +74,11 @@ echo $Page->PageHeader();
                 <li> Przeszukiwanie grafu w głąb </li>
             </ul>
 
+            <p>
+                \begin{align}
+                    \sum_{v \in V} deg (v)  = 2 |E|
+                \end{align}
+            </p>
         </div>
 
         <div class="column-course">
