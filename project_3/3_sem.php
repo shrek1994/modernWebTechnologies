@@ -126,6 +126,7 @@ echo $Page->PageHeader();
     </div>
 
 <?php
+echo $Page->addComments();
 echo $Page->addReturnButton();
 echo $Page->End();
 ?>

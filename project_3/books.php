@@ -52,6 +52,7 @@ echo $Page->PageHeader();
 
 
 <?php
+echo $Page->addComments();
 echo $Page->addReturnButton();
 echo $Page->End();
 ?>

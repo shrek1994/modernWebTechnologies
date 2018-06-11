@@ -46,7 +46,9 @@ $BUTTON = <<<EOT
     <br>
 EOT;
 
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 class MyPage {
     private $title        = "";
@@ -107,13 +109,11 @@ class MyPage {
         $this->root  = $root;
         $this->AddCSS("style.css");
 
-//        $this->db = new SQLite3("comments.db", SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
+        $this->db = new SQLite3("comments.sqlite", SQLITE3_OPEN_CREATE | SQLITE3_OPEN_READWRITE);
     }
 
 
     public function Begin() {
-//        $this->createTableIfNotExist($this->description);
-
         global $HEADER;
         $s = str_replace(["{{TITLE}}", "{{DESCRIPTION}}"], [$this->title, $this->description], $HEADER);
 
@@ -147,13 +147,12 @@ class MyPage {
         // /m : multiline
     }
 
-    private function createTableIfNotExist($tableName) {
-        $this->db->query('CREATE TABLE IF NOT EXISTS \"' . $tableName . '\" ('
-                         . '"comment" VARCHAR)');
+    private function createTableIfNotExist() {
+        $this->db->query('CREATE TABLE IF NOT EXISTS "' . $this->description . '" (' . '"comment" VARCHAR)');
     }
 
-    private function insertComment($comment) {
-        $statement = $db->prepare('SELECT * FROM "' . $this->description. '" WHERE "user_id" = ? AND "time" >= ?');
+    public function insertComment($comment) {
+        $statement = $this->db->prepare('INSERT INTO "' . $this->description . '" (comment) VALUES ( ? )');
         $statement->bindValue(1, $comment);
         $statement->execute();
     }
@@ -220,6 +219,31 @@ class MyPage {
     public function addReturnButton() {
         global $BUTTON;
         return $BUTTON;
+    }
+
+    public function addComments() {
+        $this->createTableIfNotExist();
+
+        if ($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['comments'])) {
+            $comment = $_POST['comments'];
+            $this->insertComment($comment);
+        }
+
+        $text = "<br>Komentarze:\n\t<ul>\n";
+
+        $statement = $this->db->prepare('SELECT comment FROM  "' . $this->description . '" ;');
+        $results = $statement->execute();
+        while ($row = $results->fetchArray()) {
+            $text .= "<li> " . $row[0] . " </li>\n";
+        }
+
+        $text .= "\t</ul>\n\n\t";
+        $text .= '<form method="post" width="100%">';
+        $text .= "\n\t\t<input type=\"text\" name=\"comments\" value=\"komentarz\" width=\"100%\"/>\n";
+        $text .= "\t\t<input type=\"submit\" value=\"Dodaj\">\n";
+        $text .= "\t</form>\n";
+
+        return $text;
     }
 
 } //class MyPage

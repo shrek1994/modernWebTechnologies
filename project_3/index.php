@@ -46,5 +46,31 @@ echo $Page->createColumn("Moje hobby:");
 
 echo $Page->endTable();
 ?>
+<script>
+
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
+
+
+bannerImage = document.getElementById('bannerImg');
+imgData = getBase64Image(bannerImage);
+localStorage.setItem("imgData", imgData);
+
+var dataImage = localStorage.getItem('imgData');
+bannerImg = document.getElementById('tableBanner');
+bannerImg.src = "data:img/my_photo.jpg;base64," + dataImage;
+
+
+</script>
 
 <?php echo $Page->End();?>

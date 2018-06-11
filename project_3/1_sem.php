@@ -1,4 +1,5 @@
 <?php
+
 require_once(__DIR__ . "/php/page_template.php");
 $Page =  new myPage("Maciej Woźny: edukacja");
 echo $Page->SetDescription("Pierwszy semestr (2014/15)");
@@ -29,8 +30,9 @@ echo $Page->PageHeader();
 
     </div>
 
-
 <?php
+
+echo $Page->addComments();
 echo $Page->addReturnButton();
 echo $Page->End();
 ?>
